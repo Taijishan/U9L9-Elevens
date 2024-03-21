@@ -23,6 +23,10 @@ class DrawPanel extends JPanel implements MouseListener {
         int x = 50;
         int y = 10;
         for (int i = 0; i < hand.size(); i++) {
+            if(i%3==0 && i!=0){
+                y+=96;
+                x=50;
+            }
             Card c = hand.get(i);
             if (c.getHighlight()) {
                 g.drawRect(x, y, c.getImage().getWidth(), c.getImage().getHeight());
